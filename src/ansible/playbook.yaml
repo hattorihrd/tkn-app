@@ -1,0 +1,5 @@
+- hosts: dep_servers
+  user: root
+  tasks:
+    - name: Create hoge directory
+      file: path=/tmp/hoge state=directory mode=0775 owner=root group=root

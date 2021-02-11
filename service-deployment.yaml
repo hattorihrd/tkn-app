@@ -34,6 +34,6 @@ spec:
     spec:
       containers:
       - name: node-app
-        image: hattorihrd/node-app:latest
+        image: hattorihrd/node-app
         ports:
         - containerPort: 8080

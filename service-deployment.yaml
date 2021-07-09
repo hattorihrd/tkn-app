@@ -23,7 +23,7 @@ metadata:
   name: node-app
   namespace: ia-hattorihrd-ns-tekton
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
         app: node-app

@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: node-app
-  namespace: ia-hattorihrd-ns-tekton
+  namespace: YOUR-NAMESPACE-NAME
   labels:
     app: node-app
 spec:
@@ -21,7 +21,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: node-app
-  namespace: ia-hattorihrd-ns-tekton
+  namespace: YOUR-NAMESPACE-NAME
 spec:
   replicas: 1
   selector:
@@ -34,6 +34,6 @@ spec:
     spec:
       containers:
       - name: node-app
-        image: hattorihrd/node-app
+        image: YOUR-RESISTORY-NAME/node-app
         ports:
         - containerPort: 8080

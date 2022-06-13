@@ -19,5 +19,15 @@ kubectl apply -f service-deployment.yaml
 ```
 ---
 ## イメージの作成
-フォルダ`ansble`と`tkn-app`にdockerの実行定義ファイルである`Dockerfile`があります。
-これらをまとめて`docker-compose.yml`を用いて実行します。
+フォルダansbleとtkn-appにdockerの実行定義ファイルである`Dockerfile`があります。
+これらをまとめて`docker-compose.yaml`を用いて実行します。
+```
+docker-compose up -d
+```
+
+---
+## 公開鍵の登録
+ansibleサーバはsshで通信する必要があります。sshでの通信は`ssh-keygen`であらかじめ公開鍵と秘密鍵を作成し、ssh-keyフォルダに格納しておいてください。
+公開鍵と秘密鍵は組み合わせが正しければ、作成したサーバでなくても鍵通信が可能です。ファイル内にはサーバ名が記載されていますが、扱いはメモ程度の扱いなので、違うホスト名でも何の問題もありません。
+
+鍵を格納したら、ansibleの実行に入るのですが、playbookを実行しても途中で止まってしまいます。

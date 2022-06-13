@@ -6,4 +6,4 @@ ansibleサーバ自体をコンテナ化し、初回の鍵通信もツールで�
 |ファイル名|概要|
 ----|----
 |src|ansbleサーバを自動構築するためのソースコード|
-|deployment-service.yaml|k8sを用いてイメージをデプロイ・サービス化する定義|
+|service-deployment.yaml|k8sを用いてイメージをデプロイ・サービス化する定義|
